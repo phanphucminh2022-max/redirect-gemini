@@ -1,18 +1,14 @@
-<!DOCTYPE html>
+# TẠO MÃ HTML CHUYỂN HƯỚNG TỨC THÌ (VƯỢT TƯỜNG LỬA)
+        html_content = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Tiêu đề hiển thị trên tab trình duyệt nhằm tăng độ uy tín -->
-    <title>Nâng cấp gói Gemini chính chủ</title>
-    <style>
-        /* CSS ép khung hiển thị tràn viền, ẩn thanh cuộn ảo */
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: none; }
-    </style>
+    <meta http-equiv="refresh" content="0; url={new_url}" />
+    <title>Đang chuyển hướng...</title>
 </head>
 <body>
-    <!-- Khung nhúng website đích - Nơi giấu kín URL loằng ngoằng -->
-    <iframe src="https://one.google.com/activate-plan/subscription/new/AQCpiIFTFo26hlle_8Zr4ffryqvhcP1sM8uol83AQfktSuqLxN1kRQO8nMyExQ2ltrxPCjP53bgYxXxVW3o3NseoYwxfPw3F3QXC7Yi4KrlFrqEcN57VAmCvNlKgFyOQ-RsmoiCA6iCxqwKjbrvvUV5373xnYipqU2Gj3esG2tqHA-Y8zgg8MX-yYc0QZ9Pi4oAqASrsD6Ho6wVCYpfrCdNYUYHDvU3YPLRhpA_OZYYOcHIOiSYtTuP65cBC2CtP_xn0v0yOttluWAJ_bA==?g1_landing_page=5"></iframe>
+    <script>
+        window.location.replace("{new_url}");
+    </script>
 </body>
-</html>
+</html>'''
