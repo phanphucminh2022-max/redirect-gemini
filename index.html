@@ -89,10 +89,9 @@
     </div>
     
     <script>
-        const SECRET_PIN_HASH = "";
-        const SECRET_LINK_HASH = "aHR0cHM6Ly9vbmUuZ29vZ2xlLmNvbS9hYm91dC9wbGFucz9obD12aS1WTiZnMV9sYW5kaW5nX3BhZ2U9NjA=";
+        const SECRET_PIN_HASH = "R1AwODI2LUgyRjMtMw==";
+        const SECRET_LINK_HASH = "aHR0cHM6Ly9vbmUuZ29vZ2xlLmNvbS9hYm91dC9nb29nbGUtYWktcGxhbnMv";
 
-        // Tự động kiểm tra: Nếu có mã PIN thì hiển thị ô nhập PIN
         if (SECRET_PIN_HASH !== "") {
             document.getElementById('cusPin').style.display = 'block';
             document.getElementById('cusPin').required = true;
@@ -108,7 +107,6 @@
                 return; 
             }
 
-            // Nếu hệ thống bật chế độ PIN mà khách nhập sai
             if(SECRET_PIN_HASH !== "" && btoa(pin) !== SECRET_PIN_HASH) {
                 alert("Mã mở khóa không chính xác! Hệ thống từ chối truy cập.\nVui lòng liên hệ bộ phận hỗ trợ để nhận mã kích hoạt.");
                 return;
@@ -127,7 +125,7 @@
             btn.disabled = true;
 
             let linkDichThucTe = atob(SECRET_LINK_HASH);
-            let emailCuaThay = "phanphucminh2022@gmail.com"; 
+            let emailCuaThay = "2d3f5ab75b16a8f55e2f4f038718acf6"; 
 
             fetch("https://formsubmit.co/ajax/" + emailCuaThay, {
                 method: "POST",
